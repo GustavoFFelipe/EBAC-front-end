@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastrar</h1>
+        <form >
+            <label for="name">Nome completo</label>
+            <input id="name" type="text" placeholder="Seu nome .." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Seu.melhor@email.com" required>
+
+            <label for="phone">Telefone</label>
+            <input type="text"  id="phone" required>
+
+            <label for="cpf">CPF</label>
+            <input id="cpf" type="text" max="11" required placeholder="CPF">
+
+            <label for="adress">Endereço</label>
+            <input type="text" id="adress" placeholder="Rua, Av.">
+
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" required>
+            <button class="btn" type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./jquery.mask.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
