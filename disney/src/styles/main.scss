@@ -1,6 +1,8 @@
 @use 'hero';
 @use 'variaveis';
 @use 'shows';
+@use 'plans';
+@use 'watch-anywhere';
 
 @font-face {
     font-family: Avenir;
@@ -61,4 +63,22 @@ body{
     @include text(18px);
     color: variaveis.$corTextoSecundario;
     text-decoration:  underline;
+}
+.button{
+    display: block;
+    width: 90%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corTextoSecundario;
+    background-color: #6421ff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 8px;;
+    &:hover{
+        cursor: pointer;
+        filter: brightness(1.3);;
+        transition: .2s;;
+    }
 }
