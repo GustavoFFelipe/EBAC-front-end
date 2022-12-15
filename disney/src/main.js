@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
     const buttons =  document.querySelectorAll('[data-tab-button]');
+    const questions = document.querySelectorAll('[data-faq-question]');
 
     for(let i = 0 ; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(botao){
@@ -12,7 +13,19 @@ document.addEventListener("DOMContentLoaded", function(){
             
         })
     }
+
+    for(let i = 0; i < questions.length; i++){
+        questions[i].addEventListener('click', handleToggleAnswer)
+    }
 })
+
+function handleToggleAnswer(element){
+    const elementClass = 'faq__questions__item--is-open'
+    const parentElement = element.target.parentNode;
+
+    parentElement.classList.toggle(elementClass) 
+}
+
 function handleButtons(){
     const buttons =  document.querySelectorAll('[data-tab-button]');
     for(let i = 0; i < buttons.length; i++){
