@@ -1,7 +1,30 @@
 document.addEventListener("DOMContentLoaded", function(){
     const buttons =  document.querySelectorAll('[data-tab-button]');
     const questions = document.querySelectorAll('[data-faq-question]');
+    const heroSection = document.querySelector('.hero');
 
+    const alturaHero = heroSection.clientHeight;
+
+    window.addEventListener('scroll', () => {
+        const posicaoAtual = window.scrollY;
+
+        if(posicaoAtual < alturaHero) {
+            handleVisibility()
+        } else{
+            handleVisibilityShow()
+        }
+    })
+
+function handleVisibility(){
+    const header = document.querySelector('header');
+    header.classList.add('header--is-hidden');
+}
+function handleVisibilityShow(){
+    const header = document.querySelector('header');
+    header.classList.remove('header--is-hidden');
+}
+
+//Abas
     for(let i = 0 ; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(botao){
             const tabTarget = botao.target.dataset.tabButton
@@ -13,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(){
             
         })
     }
-
+// accordion para perguntas
     for(let i = 0; i < questions.length; i++){
         questions[i].addEventListener('click', handleToggleAnswer)
     }
