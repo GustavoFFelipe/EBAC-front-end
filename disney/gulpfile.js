@@ -20,7 +20,7 @@ function images(){
 /* comprimindo javascript*/
 function minifyJS(){
     return gulp.src('./src/scripts/*.js')
-    .pipe(gulp.dest(uglify()))
+    .pipe(uglify())
     .pipe(gulp.dest('./dist/js'))
 }
 
