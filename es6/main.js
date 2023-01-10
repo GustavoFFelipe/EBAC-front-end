@@ -27,11 +27,24 @@ const alunos =  [
 
 
 alunos.forEach((aluno) => {
-    if (aluno.nota >=7 ){
+
+    function Aprovados(){
+        if (aluno.nota >=6 ){
+            console.log(`${aluno.nome} foi aprovado`);
+            } else{
+                console.log(`${aluno.nome} foi reprovado.`)
+            }
+    }
+
+    Aprovados()
+    })
+    
+/** Forma Reduzida sem utilizar a função Aprovados, retorna o mesmo resultado
+ * alunos.forEach((aluno) => {
+    if (aluno.nota >=6 ){
         console.log(`${aluno.nome} foi aprovado`);
         } else{
             console.log(`${aluno.nome} foi reprovado.`)
         }
 })
-
-
+ */
