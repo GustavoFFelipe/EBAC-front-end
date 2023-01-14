@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "babel es6/src --watch -d es6/dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2"
+  }
+}
